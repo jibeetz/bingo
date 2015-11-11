@@ -1,0 +1,255 @@
+{
+	"riolo":{
+		"isDisabled": false,
+		"id": "riolo",
+		"name": "Daniel Riolo",
+		"bingo":[
+			{
+				"mention": "Je vous l'avais dit, ressortez les bandes !",
+				"subType": "Variante",
+				"sub": "Moi j'ai dit ça ? Bah prouve le... Ressors les bandes !",
+				"points": 3,
+				"fontSize": "small"
+			},
+			{
+				"mention": "Ca fait des mois et des mois que je le dis, mais personne ne me croit",
+				"subType": "Variante",
+				"sub": "Ca fait dix ans que je le dis !",
+				"points": 2,
+				"fontSize": "small"
+			},
+			{
+				"mention": "La critique du coaching de Blanc",
+				"points": 2
+			},
+			{
+				"mention": "La débilité de l'excuse du budget",
+				"points": 3
+			},
+			{
+				"mention": "Si ce joueur est le meilleur de l'équipe, c'est qu'il y a un problème",
+				"subType": "Cible favorite",
+				"sub": "Mathieu Valbuena",
+				"points": 4,
+				"fontSize": "small"
+			},
+			{
+				"mention": "On a été les premiers à le dire dans l'After",
+				"points": 3
+			},
+			{
+				"mention": "Arrêtez de parler de l'arbitrage. C'est une excuse bidon, ça !",
+				"points": 4,
+				"fontSize": "middle"
+			},
+			{
+				"mention": "Bâle a fait son trou",
+				"points": 3
+			},
+			{
+				"mention": "Je l'ai écrit dans un de mes livres",
+				"points": 4
+			},
+			{
+				"mention": "Micheline de la compta",
+				"points": 3
+			},
+			{
+				"mention": "On en peut rien dire sans que les footix qui ne connaissent rien au foot m'insultent",
+				"points": 4,
+				"fontSize": "small"
+			},
+			{
+				"mention": "Que dit le SYN-DI-CAT ?",
+				"points": 3
+			},
+			{
+				"mention": "Tu dis n'importe quoi",
+				"subType": "Variante",
+				"sub": "Ce que tu dis n'a pas de sens",
+				"points": 2,
+				"fontSize": "middle"
+			},
+			{
+				"mention": "Rekdal, il avait un bon toucher",
+				"points": 3
+			},
+			{
+				"mention": "L'utilisation du mot caniveau",
+				"subType": "",
+				"sub": "Souvent associée au football français",
+				"points": 3,
+				"fontSize": "middle"
+			},
+			{
+				"mention": "La référence au \"carré VIP de la boîte de nuit\"",
+				"points": 4,
+				"fontSize": "middle"
+			},
+			{
+				"mention": "La Team Benzema",
+				"points": 4
+			},
+			{
+				"mention": "Je ne vais pas débattre avec toi puisqu'on n'est pas d'accord",
+				"points": 3,
+				"fontSize": "middle"
+			},
+			{
+				"mention": "C'est pas du foot qu'il aurait dû faire, c'est lde l'athlé",
+				"points": 4,
+				"fontSize": "middle"
+			},
+			{
+				"mention": "Plus personne ne joue comme ça en Europe",
+				"points": 4,
+				"fontSize": "middle"
+			},
+			{
+				"mention": "C'est une vision Ligue 1",
+				"points": 2
+			},
+			{
+				"mention": "Le corporatisme français",
+				"points": 3
+			},
+			{
+				"mention": "L'utilisation du mot \"Digeo\"",
+				"points": 1
+			},
+			{
+				"mention": "L'utilisation du mot \"Cador\"",
+				"points": 1
+			},
+			{
+				"mention": "Vénération de Bielsa",
+				"points": 3
+			},
+			{
+				"mention": "Oh non pas les charades !",
+				"points": 4
+			},
+		]
+	},
+	"gautreau":{
+		"isDisabled": false,
+		"id": "gautreau",
+		"name": "Florent ",
+		"bingo":[
+			{
+				"mention": "Blague qui fait pas rire",
+				"points": 2
+			},
+			{
+				"mention": "Blague qui fait rire",
+				"points": 4
+			},
+			{
+				"mention": "Jeu de mots pas drôle",
+				"points": 2
+			},
+			{
+				"mention": "Long silence gêné après une blague ou un jeu de mots qui n'a pas eu l'effet escompté",
+				"points": 2
+			},
+			{
+				"mention": "Référence culturelle pour briller",
+				"points": 3,
+				"fontSize": "middle"
+			},
+			{
+				"mention": "Citation de grands auteurs",
+				"points": 4
+			},
+			{
+				"mention": "Ode au football du terroir",
+				"points": 3
+			},
+			{
+				"mention": "Actualité ou référence au Tours FC",
+				"points": 1
+			},
+			{
+				"mention": "Je l'ai écrit dans un de mes livres",
+				"points": 4
+			},
+			{
+				"mention": "Micheline de la compta",
+				"points": 3
+			},
+			{
+				"mention": "Actualité de n'importe quel club de L2",
+				"points": 2,
+				"fontSize": "middle"
+			},
+			{
+				"mention": "Référence à Giroud",
+				"points": 2
+			},
+			{
+				"mention": "Référence à Koscielny",
+				"points": 2
+			},
+			{
+				"mention": "Référence à Delio Onnis",
+				"points": 2
+			},
+			{
+				"mention": "Actualité d'un ancien joueur de L2 qui brille en L1 ou à l'étranger",
+				"subType": "Bonus +2pts",
+				"sub": "S'il annonce ce joueur en équipe de France dans les 2 ans maximum",
+				"points": 2,
+				"fontSize": "small"
+			},
+			{
+				"mention": "Citation d'un joueur passé par Tours",
+				"points": 3
+			},
+			{
+				"mention": "Utilisation du bémol",
+				"points": 2
+			},
+			{
+				"mention": "A l'époque, quand je commentais la coup de la Ligue...",
+				"points": 4,
+				"fontSize": "middle"
+			},
+			{
+				"mention": "Je suis d'accord avec toi, mais en partie seulement...",
+				"points": 2,
+				"fontSize": "middle"
+			},
+			{
+				"mention": "Micro-sieste pendant l'After",
+				"subType": "",
+				"sub": "(Disparition pendant 5-10min)",
+				"points": 3,
+				"fontSize": "middle"
+			},
+			{
+				"mention": "Référence à Stade 2",
+				"points": 3
+			},
+			{
+				"mention": "J'ai fait allemand 1ère langue",
+				"points": 4
+			},
+			{
+				"mention": "Référence à son footing pour argumenter son propos",
+				"subType": "",
+				"sub": "(Exemple: Nice, je connais bien, j'ai fait mon footing sur la promenade des Anglais)",
+				"points": 3
+			},
+			{
+				"mention": "Comme on le disait dans un After cet été...",
+				"points": 4
+			},
+			{
+				"mention": "C'est une de mes marottes",
+				"subType": "",
+				"sub": "ou autre emploi de mots désuets",
+				"points": 3
+			}
+		]
+	}
+}

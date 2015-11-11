@@ -354,7 +354,7 @@ bingoApp.config(['$routeProvider', function ($routeProvider){
 }]);
 bingoControllers.controller('bingoCtrl', ['$scope', '$routeParams', 'getData', function ($scope, $routeParams, getData){
 
-	
+
 
 }]);
 bingoApp.factory('getData', [function(){
