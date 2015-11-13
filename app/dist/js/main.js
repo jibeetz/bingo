@@ -354,16 +354,14 @@ bingoApp.config(['$routeProvider', function ($routeProvider){
 }]);
 bingoControllers.controller('bingoCtrl', ['$scope', '$routeParams', 'getData', function ($scope, $routeParams, getData){
 
-
+	getData.then(function(response){
+		console.log(response.data);
+		$scope.data = response.data;
+	});
 
 }]);
-bingoApp.factory('getData', [function(){
-
-	var getData = function() {
-
-	};
-
-	return {
-		get: getData
-	};
-}]);
+bingoApp.factory('getData', ['$http',
+    function($http) {
+        return $http.get('data/data.json');
+    }
+]);

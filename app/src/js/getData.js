@@ -1,10 +1,5 @@
-bingoApp.factory('getData', [function(){
-
-	var getData = function() {
-
-	};
-
-	return {
-		get: getData
-	};
-}]);
+bingoApp.factory('getData', ['$http',
+    function($http) {
+        return $http.get('data/data.json');
+    }
+]);

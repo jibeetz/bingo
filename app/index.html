@@ -10,6 +10,12 @@
 	</head>
 	<body>
 		<header>
+			<ul>
+				
+				<li ng-repeat="(k, v) in data">
+					<a href="/{{v.id}}">{{k}}</a>
+				</li>
+			</ul>
 		</header>
 
 		<div id="container">
