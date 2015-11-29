@@ -2,7 +2,7 @@
 <html lang="fr" data-ng-app="bingoApp" data-ng-controller="bingoCtrl">
 	<head>
 		<meta charset="utf-8">
-		<title>Bingo</title>
+		<title>Afterfoot Bingo</title>
 		<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
 		<meta name="viewport" content="width=device-width">
 		<link href="dist/css/style.css" rel="stylesheet" type="text/css">
@@ -10,15 +10,33 @@
 	</head>
 	<body>
 		<header>
-			<ul>
-				
-				<li ng-repeat="(k, v) in data">
-					<a href="/{{v.id}}">{{k}}</a>
+			<ul class="left">
+				<li ng-repeat="(k, v) in data.list">
+					<label><input type="checkbox" ng-model="v.isVisible">{{k}}</label>
 				</li>
+			</ul>
+			<ul class="right">
+				<li>
+					<a href="" ng-click="resetPoints()">Réinitialiser</a>
+				</li>
+				<li>Total points : {{data.points}}</li>
+			</ul>
+			<ul class="u-right">
+				<li><a href="http://rmc.bfmtv.com/mediaplayer/live-audio/" target="_blank">RMC Live</a></li>
+				<li><a href="http://rmc.bfmtv.com/mediaplayer/podcast/l-after-foot/" target="_blank">Podcast</a></li>
 			</ul>
 		</header>
 
 		<div id="container">
+			<section ng-repeat="(k, v) in data.list" ng-show="v.isVisible">
+				Points : {{v.points}}
+				<div ng-repeat="bng in v.bingo" ng-class="{'selected': bng.isSelected}">
+					<a href="" ng-click="select(k, $index)">
+						<span>{{bng.mention}}</span>
+						<span>{{bng.points}}</span>
+					</a>
+				</div>
+			</section>
 		</div>
 	</body>
 </html>

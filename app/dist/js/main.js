@@ -341,23 +341,44 @@ F=g("script,style"),r=e.extend({},x,k,m,s),w=g("background,cite,href,longdesc,sr
 var bingoApp = angular.module('bingoApp', ['ngSanitize', 'ngRoute', 'bingoControllers']);
 
 var bingoControllers = angular.module('bingoControllers', []);
-
-bingoApp.config(['$routeProvider', function ($routeProvider){
-	$routeProvider.
-	when('/:name', {
-		templateUrl: 'partials/bingo.html',
-		controller: 'bingoCtrl'
-	}).
-	otherwise({
-		redirectTo: '/'
-	});
-}]);
 bingoControllers.controller('bingoCtrl', ['$scope', '$routeParams', 'getData', function ($scope, $routeParams, getData){
 
 	getData.then(function(response){
-		console.log(response.data);
 		$scope.data = response.data;
+		angular.forEach($scope.data.list, function(v, k) {
+			v.points = 0;
+		});
+		$scope.getPointsTotal();
 	});
+
+	$scope.select = function(id, index){
+		var bng = $scope.data.list[id].bingo[index];
+		bng.isSelected = (bng.isSelected) ? false : true;
+
+		if(bng.isSelected){
+			$scope.data.list[id].points += bng.points;
+		}else{
+			$scope.data.list[id].points -= bng.points;
+		}
+		$scope.getPointsTotal();
+	};
+
+	$scope.getPointsTotal = function(){
+		$scope.data.points = 0;
+		angular.forEach($scope.data.list, function(v, k) {
+			$scope.data.points += v.points;
+		});
+	};
+
+	$scope.resetPoints = function(){
+		angular.forEach($scope.data.list, function(v, k) {
+			v.points = 0;
+			angular.forEach(v.bingo, function(w, l) {
+				w.isSelected = false;
+			});
+		});
+		$scope.getPointsTotal();
+	};
 
 }]);
 bingoApp.factory('getData', ['$http',

@@ -29,5 +29,6 @@
     "grunt-html": "^5.0.0",
     "grunt-lesslint": "^1.1.15",
     "http-server": "~0.8.0"
-  }
+  },
+  "dependencies": {}
 }
