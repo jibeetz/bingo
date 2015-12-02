@@ -1,7 +1,62 @@
-body{
+*{
+	box-sizing: border-box;
+}
 
+body{
+	font-family: 'Open Sans', sans-serif;
+	background: #E9E9E9;
 }
 
 .selected a{
 	color: red;
+}
+
+.bingo-container{
+	border: 15px solid #ffdd00;
+	padding: 15px;
+	background: white;
+}
+
+.row{
+	margin-right: 0;
+	margin-left: 0;
+}
+
+.box{
+	height: 220px;
+	border: 1px solid #ffdd00;
+	padding: 15px;
+	border-radius: 3px;
+	position: relative;
+}
+
+.empty{
+	background-color: #ffdd00;
+}
+
+.empty *{
+	display: none !important;
+}
+
+.box a{
+	display: block;
+	color: #555;
+	font-size: 1.3em;
+	text-align: center;
+}
+
+.pts{
+	display: block;
+	position: absolute;
+	margin: auto;
+	left: 0;
+	right: 0;
+	bottom: 10px;
+	border: 3px solid #555;
+	border-radius: 50%;
+	width: 60px;
+	height: 60px;
+	line-height: 57px;
+	font-weight: bold;
+	font-size: 1.4em;
 }
