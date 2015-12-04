@@ -9,14 +9,17 @@
 body {
   font-family: 'Open Sans', sans-serif;
   background: #E9E9E9;
+  color: #5B5B5B;
 }
 .selected a {
   color: red;
 }
 .bingo-container {
-  border: 15px solid #ffdd00;
+  border: 30px solid #ffdd00;
   padding: 15px;
   background: white;
+  margin-top: -52px;
+  position: relative;
 }
 .row {
   margin-right: 0;
@@ -55,4 +58,17 @@ body {
   line-height: 57px;
   font-weight: bold;
   font-size: 1.4em;
+}
+section {
+  text-align: center;
+}
+.points {
+  position: absolute;
+  top: -75px;
+  right: 5px;
+  font-size: 1.8em;
+}
+img.logo {
+  position: relative;
+  z-index: 1;
 }

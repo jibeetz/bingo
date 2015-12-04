@@ -30,8 +30,9 @@
 
 		<div class="container">
 			<section ng-repeat="(k, v) in data.list" ng-show="v.isVisible">
-				<div class="points">Points : {{v.points}}</div>
+				<img src="dist/assets/{{v.id}}.png" alt="" class="logo">
 				<div class="bingo-container">
+					<div class="points">Points : {{v.points}}</div>
 					<div class="row">
 						<div ng-repeat="bng in v.bingo" ng-class="{'selected': bng.isSelected, 'empty': bng.isEmpty}" class="col-sm-3 col-md-2 box">
 							<a href="" ng-click="select(k, $index)">
