@@ -3,12 +3,12 @@
 		"riolo":{
 			"isVisible": true,
 			"id": "riolo",
-			"name": "Daniel Riolo",
+			"name": "D. Riolo",
 			"bingo":[
 				{
-					"mention": "Je vous l'avais dit, ressortez les bandes !",
+					"mention": "Je vous l'avais dit, ressortez les bandes!",
 					"subType": "Variante",
-					"sub": "Moi j'ai dit ça ? Bah prouve le... Ressors les bandes !",
+					"sub": "Moi j'ai dit ça ? Bah prouve le... Ressors les bandes!",
 					"points": 3,
 					"fontSize": "small"
 				},
@@ -17,7 +17,7 @@
 					"subType": "Variante",
 					"sub": "Ca fait dix ans que je le dis !",
 					"points": 2,
-					"fontSize": "small"
+					"fontSize": "smaller"
 				},
 				{
 					"isEmpty": true
@@ -79,7 +79,7 @@
 					"fontSize": "small"
 				},
 				{
-					"mention": "Que dit le SYN-DI-CAT ?",
+					"mention": "Que dit le <br />SYN-DI-CAT ?",
 					"points": 3
 				},
 				{
@@ -165,7 +165,7 @@
 		"gautreau":{
 			"isVisible": true,
 			"id": "gautreau",
-			"name": "Florent ",
+			"name": "F. Gautreau",
 			"bingo":[
 				{
 					"mention": "Blague qui fait pas rire",
@@ -191,7 +191,8 @@
 				},
 				{
 					"mention": "Long silence gêné après une blague ou un jeu de mots qui n'a pas eu l'effet escompté",
-					"points": 2
+					"points": 2,
+					"fontSize": "middle"
 				},
 				{
 					"isEmpty": true
@@ -250,7 +251,7 @@
 					"subType": "Bonus +2pts",
 					"sub": "S'il annonce ce joueur en équipe de France dans les 2 ans maximum",
 					"points": 2,
-					"fontSize": "small"
+					"fontSize": "smaller"
 				},
 				{
 					"mention": "Citation d'un joueur passé par Tours",
@@ -294,8 +295,9 @@
 				{
 					"mention": "Référence à son footing pour argumenter son propos",
 					"subType": "",
-					"sub": "(Exemple: Nice, je connais bien, j'ai fait mon footing sur la promenade des Anglais)",
-					"points": 3
+					"sub": "Nice, je connais bien, j'ai fait mon footing sur la promenade des Anglais",
+					"points": 3,
+					"fontSize": "smaller"
 				},
 				{
 					"isEmpty": true
@@ -312,6 +314,138 @@
 					"subType": "",
 					"sub": "ou autre emploi de mots désuets",
 					"points": 3
+				}
+			]
+		},
+		"brisbois":{
+			"isVisible": true,
+			"id": "brisbois",
+			"name": "G. Brisbois",
+			"bingo":[
+				{
+					"mention": "Tic de parole : «Mon p'tit Daniel»",
+					"points": 1
+				},
+				{
+					"mention": "Revendique être le boss pour espérer pouvoir terminer son argument",
+					"points": 3,
+					"fontSize": "middle"
+				},
+				{
+					"isEmpty": true
+				},
+				{
+					"mention": "Evoque un pays ou une ville lointaine et affirme que c'est très beau",
+					"points": 3,
+					"fontSize": "middle"
+				},
+				{
+					"mention": "Tente de convaincre Daniel que l'auditeur peut dire ce qu'il dit",
+					"points": 2,
+					"fontSize": "middle"
+				},
+				{
+					"mention": "Rappelle qu'il avait dit qu'Aubameyang est un grand joueur",
+					"points": 4,
+					"fontSize": "middle"
+				},
+				{
+					"mention": "Fait référence à l'Alsace, au FC Strasbourg ou à José Luis Chilavert",
+					"points": 3,
+					"fontSize": "middle"
+				},
+				{
+					"mention": "Demande des précisions médicales à Rolland Courbis",
+					"points": 3
+				},
+				{
+					"mention": "Fait référence aux origines lavalloises de Thierry Cros",
+					"points": 4
+				},
+				{
+					"mention": "Dit : «On reçoit» ou «On a reçu untel dans Luis Attaque»",
+					"points": 2
+				},
+				{
+					"isEmpty": true
+				},
+				{
+					"mention": "Tic de parole : «par ailleurs...»",
+					"points": 1
+				},
+				{
+					"mention": "Demande une anecdote Fédé à François Manardo",
+					"points": 3
+				},
+				{
+					"isEmpty": true
+				},
+				{
+					"mention": "Dit : «c'est bon !» ou «c'est pas bon !»",
+					"points": 2
+				},
+				{
+					"mention": "Recadre Daniel en rappelant le conducteur de l'émission",
+					"points": 3
+				},
+				{
+					"mention": "Dit : «Stop !» ou «Top 'Top !» pour la coupure pub",
+					"points": 1
+				},
+				{
+					"mention": "Evoque les copines multiples de Fred Hermel",
+					"points": 4
+				},
+				{
+					"mention": "Evoque les perfs du Stade Rennais auprès de Jérôme Thomas",
+					"points": 3,
+					"fontSize": "middle"
+				},
+				{
+					"mention": "Fait référence au penchant socialiste de Florent Gautreau",
+					"points": 2,
+					"fontSize": "middle"
+				},
+				{
+					"mention": "Fait référence au penchant à droite de Daniel Riolo",
+					"points": 2,
+					"fontSize": "middle"
+				},
+				{
+					"mention": "Dit : «Je peux en placer une ?!»",
+					"points": 1
+				},
+				{
+					"mention": "Est exagérément optimiste",
+					"points": 4
+				},
+				{
+					"isEmpty": true
+				},
+				{
+					"mention": "Demande à Daniel de laisser parler l'auditeur ou la Drôle de Dame",
+					"points": 2,
+					"fontSize": "middle"
+				},
+				{
+					"mention": "Rappelle que nous sommes à X jours de l'Euro 2016",
+					"points": 3
+				},
+				{
+					"mention": "Tic de parole : «Je précise...»",
+					"points": 1
+				},
+				{
+					"isEmpty": true
+				},
+				{
+					"mention": "Fait une erreur dans les chapeaux de tirage au sort",
+					"points": 4
+				},
+				{
+					"mention": "Ne fais AUCUNE erreur dans les chapeaux de tirage au sort",
+					"points": 9,
+					"fontSize": "middle"
 				}
 			]
 		}

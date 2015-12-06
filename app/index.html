@@ -10,39 +10,71 @@
 		<script src="dist/js/main.js"></script>
 	</head>
 	<body>
-		<header class="container">
-			<ul class="left">
-				<li ng-repeat="(k, v) in data.list">
-					<label><input type="checkbox" ng-model="v.isVisible">{{k}}</label>
-				</li>
-			</ul>
-			<ul class="right">
-				<li>
-					<a href="" ng-click="resetPoints()">Réinitialiser</a>
-				</li>
-				<li>Total points : {{data.points}}</li>
-			</ul>
-			<ul class="u-right">
-				<li><a href="http://rmc.bfmtv.com/mediaplayer/live-audio/" target="_blank">RMC Live</a></li>
-				<li><a href="http://rmc.bfmtv.com/mediaplayer/podcast/l-after-foot/" target="_blank">Podcast</a></li>
-			</ul>
+		<header>
+			<nav class="navbar navbar-fixed-top navbar-inverse">
+				<div class="container-fluid">
+					<div class="navbar-header">
+						<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+							<span class="sr-only">Toggle navigation</span>
+							<span class="icon-bar"></span>
+							<span class="icon-bar"></span>
+							<span class="icon-bar"></span>
+						</button>
+						<a class="navbar-brand" href="#">Bingo Afterfoot</a>
+					</div>
+
+					<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+						<ul class="nav navbar-nav">
+							<li ng-repeat="(k, v) in data.list" class="mobile-padding">
+								<div class="toggle">
+									<input type="checkbox" ng-model="v.isVisible">
+								</div>
+								<a ng-href="#{{k}}" class="items-bng">{{v.name}} : {{v.points}} points</a>
+							</li>
+							<li class="navbar-text mobile-padding">Total : {{data.points}} points</li>
+							<li>
+								<a href="" ng-click="resetPoints()">Réinitialiser</a>
+							</li>
+						</ul>
+
+						  <ul class="nav navbar-nav navbar-right">
+
+							<li class="dropdown">
+								<a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Outils <span class="caret"></span></a>
+								<ul class="dropdown-menu">
+									<li><a href="http://rmcsport.bfmtv.com/emission/after-foot/" target="_blank">L'émission</a></li><li><a href="http://rmc.bfmtv.com/mediaplayer/podcast/l-after-foot/" target="_blank">Podcast</a></li>
+									<li><a href="http://rmc.bfmtv.com/mediaplayer/live-audio/" target="_blank">RMC Live</a></li>
+									<li role="separator" class="divider"></li>
+									<li><a href="mailto:contact@bingo-afterfoot.figatellu.com?subject=Nom du presentateur" target="_blank">Suggérer des bingos</a></li>
+									<li><a href="mailto:contact@bingo-afterfoot.figatellu.com" target="_blank">Contact</a></li>
+								</ul>
+							</li>
+						</ul>
+					</div>
+				</div>
+			</nav>
+
 		</header>
 
 		<div class="container">
-			<section ng-repeat="(k, v) in data.list" ng-show="v.isVisible">
-				<img src="dist/assets/{{v.id}}.png" alt="" class="logo">
+			<section ng-repeat="(k, v) in data.list" ng-show="v.isVisible" id="{{k}}">
+				<img ng-src="dist/assets/{{v.id}}.png" alt="" class="logo">
 				<div class="bingo-container">
-					<div class="points">Points : {{v.points}}</div>
 					<div class="row">
-						<div ng-repeat="bng in v.bingo" ng-class="{'selected': bng.isSelected, 'empty': bng.isEmpty}" class="col-sm-3 col-md-2 box">
-							<a href="" ng-click="select(k, $index)">
-								<span>{{bng.mention}}</span>
-								<span class="pts">{{bng.points}}</span>
-							</a>
-						</div>
+						<a href="" ng-click="select(k, $index)" ng-repeat="bng in v.bingo" ng-class="{'selected': bng.isSelected, 'empty': bng.isEmpty}" class="col-sm-3 col-md-2 box {{bng.fontSize}}">
+							<span class="mention" ng-bind-html="bng.mention"></span>
+							<span class="mention-subtype">{{bng.subType}}</span>
+							<span class="mention-sub">{{bng.sub}}</span>
+							<span class="pts">{{bng.points}}</span>
+						</a>
+
 					</div>
 				</div>
 			</section>
 		</div>
+
+		<footer>
+			Site non officiel - <a href="mailto:contact@bingo-afterfoot.figatellu.com">contact</a> - Bingo Brisbois réalisé par <a href="hhttps://twitter.com/Alain_Jourdain/status/671578483341066240" target="_blank">@Alain_Jourdain</a>
+		</footer>
 	</body>
 </html>

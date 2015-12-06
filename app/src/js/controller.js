@@ -9,7 +9,10 @@ bingoControllers.controller('bingoCtrl', ['$scope', '$routeParams', 'getData', f
 	});
 
 	$scope.select = function(id, index){
+
 		var bng = $scope.data.list[id].bingo[index];
+		if(bng.isEmpty)
+			return;
 		bng.isSelected = (bng.isSelected) ? false : true;
 
 		if(bng.isSelected){
