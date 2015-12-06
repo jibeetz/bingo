@@ -311,22 +311,6 @@ maxFrac:2,minFrac:2,minInt:1,negPre:"-\u00a4",negSuf:"",posPre:"\u00a4",posSuf:"
  (c) 2010-2015 Google, Inc. http://angularjs.org
  License: MIT
 */
-(function(p,c,C){'use strict';function v(r,h,g){return{restrict:"ECA",terminal:!0,priority:400,transclude:"element",link:function(a,f,b,d,y){function z(){k&&(g.cancel(k),k=null);l&&(l.$destroy(),l=null);m&&(k=g.leave(m),k.then(function(){k=null}),m=null)}function x(){var b=r.current&&r.current.locals;if(c.isDefined(b&&b.$template)){var b=a.$new(),d=r.current;m=y(b,function(b){g.enter(b,null,m||f).then(function(){!c.isDefined(t)||t&&!a.$eval(t)||h()});z()});l=d.scope=b;l.$emit("$viewContentLoaded");
-l.$eval(w)}else z()}var l,m,k,t=b.autoscroll,w=b.onload||"";a.$on("$routeChangeSuccess",x);x()}}}function A(c,h,g){return{restrict:"ECA",priority:-400,link:function(a,f){var b=g.current,d=b.locals;f.html(d.$template);var y=c(f.contents());b.controller&&(d.$scope=a,d=h(b.controller,d),b.controllerAs&&(a[b.controllerAs]=d),f.data("$ngControllerController",d),f.children().data("$ngControllerController",d));y(a)}}}p=c.module("ngRoute",["ng"]).provider("$route",function(){function r(a,f){return c.extend(Object.create(a),
-f)}function h(a,c){var b=c.caseInsensitiveMatch,d={originalPath:a,regexp:a},g=d.keys=[];a=a.replace(/([().])/g,"\\$1").replace(/(\/)?:(\w+)([\?\*])?/g,function(a,c,b,d){a="?"===d?d:null;d="*"===d?d:null;g.push({name:b,optional:!!a});c=c||"";return""+(a?"":c)+"(?:"+(a?c:"")+(d&&"(.+?)"||"([^/]+)")+(a||"")+")"+(a||"")}).replace(/([\/$\*])/g,"\\$1");d.regexp=new RegExp("^"+a+"$",b?"i":"");return d}var g={};this.when=function(a,f){var b=c.copy(f);c.isUndefined(b.reloadOnSearch)&&(b.reloadOnSearch=!0);
-c.isUndefined(b.caseInsensitiveMatch)&&(b.caseInsensitiveMatch=this.caseInsensitiveMatch);g[a]=c.extend(b,a&&h(a,b));if(a){var d="/"==a[a.length-1]?a.substr(0,a.length-1):a+"/";g[d]=c.extend({redirectTo:a},h(d,b))}return this};this.caseInsensitiveMatch=!1;this.otherwise=function(a){"string"===typeof a&&(a={redirectTo:a});this.when(null,a);return this};this.$get=["$rootScope","$location","$routeParams","$q","$injector","$templateRequest","$sce",function(a,f,b,d,h,p,x){function l(b){var e=s.current;
-(v=(n=k())&&e&&n.$$route===e.$$route&&c.equals(n.pathParams,e.pathParams)&&!n.reloadOnSearch&&!w)||!e&&!n||a.$broadcast("$routeChangeStart",n,e).defaultPrevented&&b&&b.preventDefault()}function m(){var u=s.current,e=n;if(v)u.params=e.params,c.copy(u.params,b),a.$broadcast("$routeUpdate",u);else if(e||u)w=!1,(s.current=e)&&e.redirectTo&&(c.isString(e.redirectTo)?f.path(t(e.redirectTo,e.params)).search(e.params).replace():f.url(e.redirectTo(e.pathParams,f.path(),f.search())).replace()),d.when(e).then(function(){if(e){var a=
-c.extend({},e.resolve),b,f;c.forEach(a,function(b,e){a[e]=c.isString(b)?h.get(b):h.invoke(b,null,null,e)});c.isDefined(b=e.template)?c.isFunction(b)&&(b=b(e.params)):c.isDefined(f=e.templateUrl)&&(c.isFunction(f)&&(f=f(e.params)),c.isDefined(f)&&(e.loadedTemplateUrl=x.valueOf(f),b=p(f)));c.isDefined(b)&&(a.$template=b);return d.all(a)}}).then(function(f){e==s.current&&(e&&(e.locals=f,c.copy(e.params,b)),a.$broadcast("$routeChangeSuccess",e,u))},function(b){e==s.current&&a.$broadcast("$routeChangeError",
-e,u,b)})}function k(){var a,b;c.forEach(g,function(d,g){var q;if(q=!b){var h=f.path();q=d.keys;var l={};if(d.regexp)if(h=d.regexp.exec(h)){for(var k=1,m=h.length;k<m;++k){var n=q[k-1],p=h[k];n&&p&&(l[n.name]=p)}q=l}else q=null;else q=null;q=a=q}q&&(b=r(d,{params:c.extend({},f.search(),a),pathParams:a}),b.$$route=d)});return b||g[null]&&r(g[null],{params:{},pathParams:{}})}function t(a,b){var d=[];c.forEach((a||"").split(":"),function(a,c){if(0===c)d.push(a);else{var f=a.match(/(\w+)(?:[?*])?(.*)/),
-g=f[1];d.push(b[g]);d.push(f[2]||"");delete b[g]}});return d.join("")}var w=!1,n,v,s={routes:g,reload:function(){w=!0;a.$evalAsync(function(){l();m()})},updateParams:function(a){if(this.current&&this.current.$$route)a=c.extend({},this.current.params,a),f.path(t(this.current.$$route.originalPath,a)),f.search(a);else throw B("norout");}};a.$on("$locationChangeStart",l);a.$on("$locationChangeSuccess",m);return s}]});var B=c.$$minErr("ngRoute");p.provider("$routeParams",function(){this.$get=function(){return{}}});
-p.directive("ngView",v);p.directive("ngView",A);v.$inject=["$route","$anchorScroll","$animate"];A.$inject=["$compile","$controller","$route"]})(window,window.angular);
-//# sourceMappingURL=angular-route.min.js.map
-
-/*
- AngularJS v1.5.0-build.4378+sha.b837fc3
- (c) 2010-2015 Google, Inc. http://angularjs.org
- License: MIT
-*/
 (function(y,e,z){'use strict';function A(a){var d=[];t(d,e.noop).chars(a);return d.join("")}function g(a,d){var b={},c=a.split(","),l;for(l=0;l<c.length;l++)b[d?e.lowercase(c[l]):c[l]]=!0;return b}function B(a,d){null===a||a===z?a="":"string"!==typeof a&&(a=""+a);f.innerHTML=a;var b=5;do{if(0===b)throw u("uinput");b--;11>=document.documentMode&&n(f);a=f.innerHTML;f.innerHTML=a}while(a!==f.innerHTML);for(b=f.firstChild;b;){switch(b.nodeType){case 1:d.start(b.nodeName.toLowerCase(),C(b.attributes));
 break;case 3:d.chars(b.textContent)}var c;if(!(c=b.firstChild)&&(1==b.nodeType&&d.end(b.nodeName.toLowerCase()),c=b.nextSibling,!c))for(;null==c;){b=b.parentNode;if(b===f)break;c=b.nextSibling;1==b.nodeType&&d.end(b.nodeName.toLowerCase())}b=c}for(;b=f.firstChild;)f.removeChild(b)}function C(a){for(var d={},b=0,c=a.length;b<c;b++){var l=a[b];d[l.name]=l.value}return d}function v(a){return a.replace(/&/g,"&amp;").replace(D,function(a){var b=a.charCodeAt(0);a=a.charCodeAt(1);return"&#"+(1024*(b-55296)+
 (a-56320)+65536)+";"}).replace(E,function(a){return"&#"+a.charCodeAt(0)+";"}).replace(/</g,"&lt;").replace(/>/g,"&gt;")}function t(a,d){var b=!1,c=e.bind(a,a.push);return{start:function(a,h){a=e.lowercase(a);!b&&F[a]&&(b=a);b||!0!==r[a]||(c("<"),c(a),e.forEach(h,function(b,h){var f=e.lowercase(h),g="img"===a&&"src"===f||"background"===f;!0!==G[f]||!0===w[f]&&!d(b,g)||(c(" "),c(h),c('="'),c(v(b)),c('"'))}),c(">"))},end:function(a){a=e.lowercase(a);b||!0!==r[a]||!0===x[a]||(c("</"),c(a),c(">"));a==
@@ -338,16 +322,50 @@ F=g("script,style"),r=e.extend({},x,k,m,s),w=g("background,cite,href,longdesc,sr
 "target"in h||p.push('target="',f,'" ');p.push('href="',a.replace(/"/g,"&quot;"),'">');g(b);p.push("</a>")}if(!c)return c;for(var q=c,p=[],k,n;c=q.match(d);)k=c[0],c[2]||c[4]||(k=(c[3]?"http://":"mailto:")+k),n=c.index,g(q.substr(0,n)),m(k,c[0].replace(b,"")),q=q.substring(n+c[0].length);g(q);return a(p.join(""))}}])})(window,window.angular);
 //# sourceMappingURL=angular-sanitize.min.js.map
 
-var bingoApp = angular.module('bingoApp', ['ngSanitize', 'ngRoute', 'bingoControllers']);
+// Utilities
+
+function localStorageTest(){
+	var test = 'test';
+	try {
+		localStorage.setItem(test, test);
+		localStorage.removeItem(test);
+		return true;
+	} catch(e) {
+		return false;
+	}
+}
+
+var slug = function(str) {
+	str = str.replace(/^\s+|\s+$/g, ''); // trim
+	str = str.toLowerCase();
+
+	// remove accents, swap ñ for n, etc
+	var from = "ãàáäâẽèéëêìíïîõòóöôùúüûñç·/_,:;";
+	var to   = "aaaaaeeeeeiiiiooooouuuunc------";
+	for (var i=0, l=from.length ; i<l ; i++) {
+		str = str.replace(new RegExp(from.charAt(i), 'g'), to.charAt(i));
+	}
+
+	str = str.replace(/[^a-z0-9 -]/g, '') // remove invalid chars
+	.replace(/\s+/g, '-') // collapse whitespace and replace by -
+	.replace(/-+/g, '-'); // collapse dashes
+
+	return str;
+};
+var bingoApp = angular.module('bingoApp', ['ngSanitize', 'bingoControllers']);
 
 var bingoControllers = angular.module('bingoControllers', []);
-bingoControllers.controller('bingoCtrl', ['$scope', '$routeParams', 'getData', function ($scope, $routeParams, getData){
+bingoControllers.controller('bingoCtrl', ['$scope', 'dataHandler', function ($scope, dataHandler){
 
-	getData.then(function(response){
-		$scope.data = response.data;
-		angular.forEach($scope.data.list, function(v, k) {
-			v.points = 0;
-		});
+	dataHandler.get().then(function(response){
+
+		$scope.data = (response.data) ? response.data : response;
+
+		if(response.data)
+			angular.forEach($scope.data.list, function(v, k) {
+				v.points = 0;
+			});
+
 		$scope.getPointsTotal();
 	});
 
@@ -364,6 +382,7 @@ bingoControllers.controller('bingoCtrl', ['$scope', '$routeParams', 'getData', f
 			$scope.data.list[id].points -= bng.points;
 		}
 		$scope.getPointsTotal();
+		dataHandler.set($scope.data);
 	};
 
 	$scope.getPointsTotal = function(){
@@ -381,11 +400,44 @@ bingoControllers.controller('bingoCtrl', ['$scope', '$routeParams', 'getData', f
 			});
 		});
 		$scope.getPointsTotal();
+		dataHandler.set($scope.data);
 	};
 
 }]);
 bingoApp.factory('getData', ['$http',
     function($http) {
         return $http.get('data/data.json');
+    }
+]);
+bingoApp.factory('dataHandler', ['$q', 'getData',
+    function($q, getData) {
+
+ 		var bingo = getData;
+
+    	return {
+
+    		get: function(){
+
+    			if(!this.test())
+    				return bingo;
+
+    			if(!localStorage.bingo || localStorage.bingo.length <= 2)
+    				return bingo;
+
+    			var deferred = $q.defer(),
+    				localData = JSON.parse(localStorage.bingo);
+
+    			deferred.resolve(localData);
+    			return deferred.promise;
+    		},
+    		set: function(data){
+    			localStorage.setItem('bingo', angular.toJson(data));
+    		},
+    		test: function(){
+    			return localStorageTest();
+    		}
+
+    	};
+
     }
 ]);

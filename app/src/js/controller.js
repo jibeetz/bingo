@@ -1,10 +1,14 @@
-bingoControllers.controller('bingoCtrl', ['$scope', '$routeParams', 'getData', function ($scope, $routeParams, getData){
+bingoControllers.controller('bingoCtrl', ['$scope', 'dataHandler', function ($scope, dataHandler){
 
-	getData.then(function(response){
-		$scope.data = response.data;
-		angular.forEach($scope.data.list, function(v, k) {
-			v.points = 0;
-		});
+	dataHandler.get().then(function(response){
+
+		$scope.data = (response.data) ? response.data : response;
+
+		if(response.data)
+			angular.forEach($scope.data.list, function(v, k) {
+				v.points = 0;
+			});
+
 		$scope.getPointsTotal();
 	});
 
@@ -21,6 +25,7 @@ bingoControllers.controller('bingoCtrl', ['$scope', '$routeParams', 'getData', f
 			$scope.data.list[id].points -= bng.points;
 		}
 		$scope.getPointsTotal();
+		dataHandler.set($scope.data);
 	};
 
 	$scope.getPointsTotal = function(){
@@ -38,6 +43,7 @@ bingoControllers.controller('bingoCtrl', ['$scope', '$routeParams', 'getData', f
 			});
 		});
 		$scope.getPointsTotal();
+		dataHandler.set($scope.data);
 	};
 
 }]);

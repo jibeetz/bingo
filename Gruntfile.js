@@ -7,11 +7,12 @@ module.exports = function(grunt) {
           'app/src/js/libs/jquery-1.11.3.min.js',
           'app/src/js/libs/bootstrap.min.js',
           'app/src/js/libs/angular.min.js',
-          'app/src/js/libs/angular-route.min.js',
           'app/src/js/libs/angular-sanitize.min.js',
+          'app/src/js/utilities.js',
           'app/src/js/app.js',
           'app/src/js/controller.js',
-          'app/src/js/getData.js'
+          'app/src/js/getData.js',
+          'app/src/js/dataHandler.js'
       ]
   };
 

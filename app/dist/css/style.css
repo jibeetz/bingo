@@ -140,9 +140,11 @@ img.logo {
 }
 .toggle {
   display: inline-block;
+  margin-left: 10px;
 }
 .nav > li > a.items-bng {
   padding-left: 5px;
+  padding-right: 10px;
 }
 .navbar-inverse {
   border-color: #2CC0FF;
@@ -150,30 +152,27 @@ img.logo {
 .navbar-fixed-top {
   border-width: 0 0 3px;
 }
+.navbar-inverse .navbar-text {
+  margin: 15px 10px;
+}
 .navbar-inverse .navbar-text,
 .navbar-inverse .navbar-brand {
   color: #fff;
-}
-.navbar-inverse .navbar-brand {
-  margin-right: 10px;
-}
-#riolo .empty {
-  background-image: url(../assets/empty-riolo.png);
-}
-#gautreau .empty {
-  background-image: url(../assets/empty-gautreau.png);
-}
-#brisbois .empty {
-  background-image: url(../assets/empty-brisbois.png);
 }
 footer {
   padding: 15px;
   margin-top: 15px;
   text-align: center;
 }
-@media (min-width: 768px) and (max-width: 768px) {
-  .navbar-fixed-top {
-    position: relative;
+footer a {
+  color: #2CC0FF;
+}
+#credits .modal-content {
+  border-radius: 0;
+}
+@media (min-width: 768px) and (max-width: 990px) {
+  section {
+    padding-top: 115px;
   }
 }
 @media (max-width: 767px) {
@@ -197,11 +196,34 @@ footer {
     margin-top: 15px;
   }
   .mobile-padding {
-    padding: 0 15px;
+    padding: 0 5px;
+  }
+  a.box.selected:after {
+    font-size: 125px;
+    top: 5px;
   }
 }
 @media (max-width: 605px) {
   .logo {
-    width: 100%;
+    width: 500px;
+  }
+  .bingo-container {
+    margin-top: -44px;
+  }
+}
+@media (max-width: 525px) {
+  .logo {
+    width: 400px;
+  }
+  .bingo-container {
+    margin-top: -35px;
+  }
+}
+@media (max-width: 425px) {
+  .logo {
+    width: 280px;
+  }
+  .bingo-container {
+    margin-top: -25px;
   }
 }

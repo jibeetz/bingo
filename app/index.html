@@ -32,7 +32,7 @@
 								<a ng-href="#{{k}}" class="items-bng">{{v.name}} : {{v.points}} points</a>
 							</li>
 							<li class="navbar-text mobile-padding">Total : {{data.points}} points</li>
-							<li>
+							<li ng-show="data.points !== 0">
 								<a href="" ng-click="resetPoints()">Réinitialiser</a>
 							</li>
 						</ul>
@@ -42,11 +42,13 @@
 							<li class="dropdown">
 								<a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Outils <span class="caret"></span></a>
 								<ul class="dropdown-menu">
-									<li><a href="http://rmcsport.bfmtv.com/emission/after-foot/" target="_blank">L'émission</a></li><li><a href="http://rmc.bfmtv.com/mediaplayer/podcast/l-after-foot/" target="_blank">Podcast</a></li>
+									<li><a href="http://rmcsport.bfmtv.com/emission/after-foot/" target="_blank">L'émission</a></li>
+									<li><a href="http://rmc.bfmtv.com/mediaplayer/podcast/l-after-foot/" target="_blank">Podcast</a></li>
 									<li><a href="http://rmc.bfmtv.com/mediaplayer/live-audio/" target="_blank">RMC Live</a></li>
 									<li role="separator" class="divider"></li>
 									<li><a href="mailto:contact@bingo-afterfoot.figatellu.com?subject=Nom du presentateur" target="_blank">Suggérer des bingos</a></li>
 									<li><a href="mailto:contact@bingo-afterfoot.figatellu.com" target="_blank">Contact</a></li>
+									<li><a href="" data-toggle="modal" data-target="#credits">Crédits</a></li>
 								</ul>
 							</li>
 						</ul>
@@ -70,11 +72,33 @@
 
 					</div>
 				</div>
+				<style>
+					#{{v.id}} .empty{background-image: url(dist/assets/empty-{{v.id}}.png);}
+				</style>
 			</section>
 		</div>
 
 		<footer>
-			Site non officiel - <a href="mailto:contact@bingo-afterfoot.figatellu.com">contact</a> - Bingo Brisbois réalisé par <a href="hhttps://twitter.com/Alain_Jourdain/status/671578483341066240" target="_blank">@Alain_Jourdain</a>
+			Site non officiel - <a href="mailto:contact@bingo-afterfoot.figatellu.com">contact</a> - <a href="" data-toggle="modal" data-target="#credits">Crédits</a>
 		</footer>
+
+		<div class="modal fade" tabindex="-1" role="dialog" id="credits" aria-labelledby="credits">
+			<div class="modal-dialog">
+				<div class="modal-content">
+					<div class="modal-header">
+						<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+						<h4 class="modal-title">Crédits</h4>
+					</div>
+					<div class="modal-body">
+						<p>Le Bingo Brisbois a été réalisé par <a href="hhttps://twitter.com/Alain_Jourdain/status/671578483341066240" target="_blank">@Alain_Jourdain</a></p>
+						<p><a href="http://rmcsport.bfmtv.com/emission/bingo-riolo-faites-votre-grille-925291.html" target="_blank">Bingo Riolo</a> par l'équipe RMC</p>
+						<p><a href="http://rmcsport.bfmtv.com/emission/bingo-gautreau-faites-votre-grille-928908.html" target="_blank">Bingo Gautreau</a> par l'équipe RMC</p>
+					</div>
+					<div class="modal-footer">
+						<button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+					</div>
+				</div><!-- /.modal-content -->
+			</div><!-- /.modal-dialog -->
+		</div><!-- /.modal -->
 	</body>
 </html>

@@ -1,3 +1,3 @@
-var bingoApp = angular.module('bingoApp', ['ngSanitize', 'ngRoute', 'bingoControllers']);
+var bingoApp = angular.module('bingoApp', ['ngSanitize', 'bingoControllers']);
 
 var bingoControllers = angular.module('bingoControllers', []);
