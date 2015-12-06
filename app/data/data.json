@@ -4,6 +4,7 @@
 			"isVisible": true,
 			"id": "riolo",
 			"name": "D. Riolo",
+			"emptyImgPos": 194,
 			"bingo":[
 				{
 					"mention": "Je vous l'avais dit, ressortez les bandes!",
@@ -166,6 +167,7 @@
 			"isVisible": true,
 			"id": "gautreau",
 			"name": "F. Gautreau",
+			"emptyImgPos": 388,
 			"bingo":[
 				{
 					"mention": "Blague qui fait pas rire",
@@ -321,6 +323,7 @@
 			"isVisible": true,
 			"id": "brisbois",
 			"name": "G. Brisbois",
+			"emptyImgPos": 0,
 			"bingo":[
 				{
 					"mention": "Tic de parole : «Mon p'tit Daniel»",
