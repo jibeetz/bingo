@@ -1,11 +1,11 @@
 {
-	"list":{
-		"riolo":{
+	"list": {
+		"riolo": {
 			"isVisible": true,
 			"id": "riolo",
 			"name": "D. Riolo",
 			"emptyImgPos": 194,
-			"bingo":[
+			"bingo": [
 				{
 					"mention": "Je vous l'avais dit, ressortez les bandes!",
 					"subType": "Variante",
@@ -163,12 +163,12 @@
 				}
 			]
 		},
-		"gautreau":{
+		"gautreau": {
 			"isVisible": true,
 			"id": "gautreau",
 			"name": "F. Gautreau",
 			"emptyImgPos": 388,
-			"bingo":[
+			"bingo": [
 				{
 					"mention": "Blague qui fait pas rire",
 					"points": 2
@@ -319,12 +319,12 @@
 				}
 			]
 		},
-		"brisbois":{
+		"brisbois": {
 			"isVisible": true,
 			"id": "brisbois",
 			"name": "G. Brisbois",
 			"emptyImgPos": 0,
-			"bingo":[
+			"bingo": [
 				{
 					"mention": "Tic de parole : «Mon p'tit Daniel»",
 					"points": 1
@@ -449,6 +449,62 @@
 					"mention": "Ne fais AUCUNE erreur dans les chapeaux de tirage au sort",
 					"points": 9,
 					"fontSize": "middle"
+				}
+			]
+		},
+		"rothen": {
+			"isVisible": true,
+			"id": "rothen",
+			"name": "J. Rothen",
+			"emptyImgPos": 194,
+			"bingo": [
+				{
+					"mention": "Je suis un produit Marketing pour RMC",
+					"points": 2
+				},
+				{
+					"mention": "J'lui ai mis un ballon, il a dit, Incroyable",
+					"points": 2,
+					"fontSize": "middle"
+				},
+				{
+					"isEmpty": true
+				},
+				{
+					"mention": "J'lui ai fait sa carrière à...",
+					"points": 4
+				},
+				{
+					"mention": "J'me suis jamais plains de la pelouse",
+					"points": 1
+				},
+				{
+					"isEmpty": true
+				},
+				{
+					"mention": "J'ai jamais connu le banc, ça va pas commencer aujourd'hui",
+					"points": 4,
+					"fontSize": "middle"
+				},
+				{
+					"isEmpty": true
+				},
+				{
+					"mention": "Quand je roulais en Porsche 911",
+					"points": 1
+				},
+				{
+					"isEmpty": true
+				},
+				{
+					"mention": "Mes commentaires ont embelli le match",
+					"subType": "Variante",
+					"sub": "J'ai sauvé le match avec mes commentaires",
+					"points": 4,
+					"fontSize": "small"
+				},
+				{
+					"isEmpty": true
 				}
 			]
 		}
